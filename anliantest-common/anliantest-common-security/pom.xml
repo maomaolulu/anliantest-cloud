@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.anliantest</groupId>
+        <artifactId>anliantest-common</artifactId>
+        <version>3.6.2</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>anliantest-common-security</artifactId>
+
+    <description>
+        anliantest-common-security安全模块
+    </description>
+
+    <dependencies>
+
+        <!-- Spring Web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- RuoYi Api System -->
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-system</artifactId>
+        </dependency>
+
+        <!-- RuoYi Api Third -->
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-third</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+
+        <!-- RuoYi Common Redis-->
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-common-redis</artifactId>
+        </dependency>
+
+        <!-- RuoYi Api data -->
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-data</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-message</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-rocketmq</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+        <!-- RuoYi Api file -->
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-file</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-websocket</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-job</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.anliantest</groupId>
+            <artifactId>anliantest-api-project</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+    </dependencies>
+
+</project>

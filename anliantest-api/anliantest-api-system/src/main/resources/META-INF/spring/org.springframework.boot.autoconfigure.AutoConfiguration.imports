@@ -1,0 +1,4 @@
+com.anliantest.system.api.factory.RemoteUserFallbackFactory
+com.anliantest.system.api.factory.RemoteLogFallbackFactory
+com.anliantest.system.api.factory.RemoteFileFallbackFactory
+com.anliantest.system.api.factory.RemoteConfigFallbackFactory

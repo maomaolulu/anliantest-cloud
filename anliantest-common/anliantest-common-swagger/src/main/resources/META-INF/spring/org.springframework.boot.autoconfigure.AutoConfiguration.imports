@@ -1,0 +1,3 @@
+# com.anliantest.common.swagger.config.SwaggerAutoConfiguration
+# com.anliantest.common.swagger.config.SwaggerWebConfiguration
+# com.anliantest.common.swagger.config.SwaggerBeanPostProcessor

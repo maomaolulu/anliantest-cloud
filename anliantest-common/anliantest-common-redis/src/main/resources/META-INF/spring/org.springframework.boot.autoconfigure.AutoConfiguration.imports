@@ -1,0 +1,2 @@
+com.anliantest.common.redis.configure.RedisConfig
+com.anliantest.common.redis.service.RedisService

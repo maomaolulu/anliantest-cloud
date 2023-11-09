@@ -1,0 +1,2 @@
+com.anliantest.common.log.service.AsyncLogService
+com.anliantest.common.log.aspect.LogAspect

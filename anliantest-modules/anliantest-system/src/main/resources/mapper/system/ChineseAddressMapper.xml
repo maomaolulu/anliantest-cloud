@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.anliantest.system.mapper.ChineseAddressMapper">
+
+    <resultMap type="ChineseAddress" id="ChineseAddressResult">
+        <id     property="id"      column="id"/>
+        <result property="regionCode"      column="region_code"/>
+        <result property="regionName"    column="region_name"/>
+        <result property="regionParentId"     column="region_parent_id"/>
+        <result property="center"   column="center"/>
+        <result property="regionLevel"    column="region_level"/>
+    </resultMap>
+
+    <sql id="selectConfigVo">
+        select id,region_code, region_name, region_parent_id, center, region_level from sys_chinese_address
+    </sql>
+
+    <insert id="batchSaveChineseAddress">
+        insert into sys_chinese_address(id,region_code, region_name,region_parent_id,center,region_level) values
+        <foreach item="item" index="index" collection="list" separator=",">
+            (#{item.id},#{item.regionCode},#{item.regionName},#{item.regionParentId},#{item.center},#{item.regionLevel})
+        </foreach>
+    </insert>
+
+    <delete id="deleteChineseAddress">
+        delete from sys_chinese_address
+    </delete>
+
+    <select id="selectCount" resultType="int">
+        select count(*) from sys_chinese_address
+    </select>
+
+    <select id="getList" parameterType="String" resultMap="ChineseAddressResult">
+        <include refid="selectConfigVo"/>
+        <where>
+            <if test="regionName != null and regionName != ''">
+                and region_name like CONCAT('%', #{regionName}, '%')
+            </if>
+        </where>
+    </select>
+
+    <select id="getRegions" parameterType="String" resultMap="ChineseAddressResult">
+        <include refid="selectConfigVo"/>
+        <where>
+            <if test="regionParentId != null and regionParentId != ''">
+                and region_parent_id = #{regionParentId}
+            </if>
+            <if test="regionParentId == null or regionParentId == ''">
+                and region_parent_id is null
+            </if>
+        </where>
+        order by region_code asc
+    </select>
+</mapper>

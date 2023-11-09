@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.anliantest</groupId>
+        <artifactId>anliantest</artifactId>
+        <version>3.6.2</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>anliantest-api-system</module>
+        <module>anliantest-api-data</module>
+        <module>anliantest-api-file</module>
+        <module>anliantest-api-message</module>
+        <module>anliantest-api-project</module>
+        <module>anliantest-api-third</module>
+        <module>anliantest-api-rocketmq</module>
+        <module>anliantest-api-websocket</module>
+        <module>anliantest-api-job</module>
+    </modules>
+
+    <artifactId>anliantest-api</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        anliantest-api系统接口
+    </description>
+
+</project>
