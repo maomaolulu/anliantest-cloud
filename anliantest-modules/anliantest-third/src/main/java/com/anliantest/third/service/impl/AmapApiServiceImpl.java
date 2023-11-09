@@ -13,6 +13,7 @@ import com.anliantest.third.constant.AmapConstants;
 import com.anliantest.third.service.IAmapApiService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -33,10 +34,12 @@ public class AmapApiServiceImpl implements IAmapApiService {
     @Autowired
     private RemoteRocketMqSendService remoteRocketMqSendService;
 
+    @Value("${amap.api.url}")
+    private String amapApiUrl;
+
     @Override
     @Async
     public void synchronizationData() {
-        String amapApiUrl = "https://restapi.amap.com/v3/config/district?&subdistrict=4&key=9ccd0307d38b2eecd842c481f0aec9c0";
         String chineseAddress = HttpUtil.createGet(amapApiUrl).execute().body();
         if(StringUtils.isNotBlank(chineseAddress)){
             AmapData amapData = JSONObject.parseObject(chineseAddress, AmapData.class);
